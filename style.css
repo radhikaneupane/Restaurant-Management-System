@@ -1,0 +1,72 @@
+/* Style for body */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style for heading */
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Style for form */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px #999;
+    border-radius: 10px;
+  }
+  
+  /* Style for form label */
+  form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  form input[type="text"],
+  form input[type="tel"],
+  form input[type="date"],
+  form input[type="time"],
+  form input[type="number"],
+  form textarea {
+    padding: 2px;
+    margin-bottom: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  /* Style for form submit button */
+  form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Style for form submit button on hover */
+  form input[type="submit"]:hover {
+    background-color: #555;
+  }
+
+  body {
+    background: url('https://static.toiimg.com/thumb/53110049.cms?width=1200&height=900');
+    background-size: cover;
+    overflow: hidden;
+    height: 50vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+  }
+   
+  
