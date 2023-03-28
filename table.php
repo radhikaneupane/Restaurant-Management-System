@@ -12,7 +12,7 @@ if (isset($_POST['table'])) {
     $guests  = $_POST['guests'];
     $special = $_POST['special'];
 
-    ritesh
+  
 
     // Validate form data
     if (empty($name) || empty($phone) || empty($date) || empty($time) || empty($guests)) {
