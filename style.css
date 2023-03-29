@@ -14,7 +14,7 @@ body {
   
   /* Style for form */
   form {
-    max-width: 400px;
+    max-width: 300px;
     margin: 0 auto;
     padding: 10px;
     background-color: #fff;
@@ -69,4 +69,20 @@ body {
     background-color: #f2f2f2;
   }
    
-  
+  /* Style for container div */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Style for form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #999;
+  border-radius: 10px;
+}
+

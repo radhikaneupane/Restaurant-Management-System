@@ -40,6 +40,7 @@ if (isset($_POST['table'])) {
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  
   <h1>Table Booking</h1>
   <form method="POST" action="table.php">
 
