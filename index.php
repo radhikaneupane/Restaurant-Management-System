@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Restro Management System</title>
-
+ 
 
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
@@ -55,7 +55,7 @@
 
         /* .links>a {
             color: white;
-            padding: 0 25px;
+            padding: 00 25px;
             font-size: 13px;
             font-weight: 600;
             letter-spacing: .1rem;
