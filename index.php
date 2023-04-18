@@ -103,8 +103,8 @@
 
             <div class="links">
           
-                <a href="Restro/admin/">Admin Log In</a>
-                <a href="Restro/super/">SuperAdmin Log In</a>
+                <a href="Restro/admin/">Log In</a>
+                <a href="booking.php">Table Booking</a>
                
             </div>
         </div>

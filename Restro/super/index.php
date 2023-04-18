@@ -3,14 +3,15 @@ session_start();
 include('config/config.php');
 //login 
 if (isset($_POST['login'])) {
-  $admin_email = $_POST['admin_email'];
-  $admin_password = sha1($_POST['admin_password']); 
-  $stmt = $mysqli->prepare("SELECT admin_email, admin_password, admin_id  FROM   rpos_admin WHERE (admin_email =? AND admin_password =?)"); //sql to log in user
-  $stmt->bind_param('ss',  $admin_email, $admin_password); //bind fetched parameters
+  $superadmin_email = $_POST['superadmin_email'];
+  $superadmin_password = sha1($_POST['superadmin_password']); 
+  $stmt = $mysqli->prepare("SELECT superadmin_email, superadmin_password, superadmin_id  FROM 
+    rpos_superadmin WHERE (superadmin_email =? AND superadmin_password =?)"); //sql to log in user
+  $stmt->bind_param('ss',  $superadmin_email, $superadmin_password); //bind fetched parameters
   $stmt->execute(); //execute bind 
-  $stmt->bind_result($admin_email, $admin_password, $admin_id); //bind result
+  $stmt->bind_result($superadmin_email, $superadmin_password, $superadmin_id); //bind result
   $rs = $stmt->fetch();
-  $_SESSION['admin_id'] = $admin_id;
+  $_SESSION['superadmin_id'] = $superadmin_id;
   if ($rs) {
     
     header("location:dashboard.php");
