@@ -53,15 +53,6 @@
             font-size: 84px;
         }
 
-        /* .links>a {
-            color: white;
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        } */
 
 
         .links {
@@ -103,7 +94,7 @@
 
             <div class="links">
           
-                <a href="Restro/admin/">Log In</a>
+                <a href="Restro/login/">Log In</a>
                 <a href="booking.php">Table Booking</a>
                
             </div>
