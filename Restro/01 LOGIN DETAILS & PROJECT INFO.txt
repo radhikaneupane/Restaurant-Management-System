@@ -1,0 +1,20 @@
+**Log on to freeprojectscodes.com for more projects!***
+
+**Database Name: rposystem**
+
+**Developed by Martin Mbithi Nzilani**
+
+**Recommended PHP Version 7.4**
+
+
+**Admin Login Details**
+
+Email	: admin@mail.com
+Password: freeprojectscodes.com
+
+**Cashier Login Details**
+
+Email	: darkseid@mail.com
+Password: freeprojectscodes.com
+
+
