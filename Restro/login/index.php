@@ -5,7 +5,6 @@ if (isset($_POST['login'])) {
   $email = $_POST['email'];
   $password = sha1($_POST['password']);
 
-  // check if user is admin 
   $admin_query = "SELECT admin_email, admin_password, admin_id FROM rpos_admin WHERE admin_email = ?";
   $stmt = $mysqli->prepare($admin_query);
   $stmt->bind_param('s', $email);
@@ -43,13 +42,13 @@ if (isset($_POST['login'])) {
       if ($password == $superadmin_password) {
         $_SESSION['superadmin_id'] = $superadmin_id;
         $_SESSION['user_type'] = 'superadmin';
-        header("Location: super/dashboard.php");
+        header("Location: superadmin/dashboard.php");
         exit();
       } else {
         $err = "Incorrect Password";
       }
     } else {
-      // check if user is cashier
+
       $cashier_query = "SELECT cashier_email, cashier_password, cashier_id FROM rpos_cashier WHERE cashier_email = ?";
       $stmt = $mysqli->prepare($cashier_query);
       $stmt->bind_param('s', $email);
@@ -74,9 +73,36 @@ if (isset($_POST['login'])) {
         $err = "Incorrect Email";
       }
     }
+
+    $waiter_query = "SELECT waiter_email, waiter_password, waiter_id FROM rpos_waiter WHERE waiter_email = ?";
+    $stmt = $mysqli->prepare($waiter_query);
+    $stmt->bind_param('s', $email);
+    $stmt->execute();
+    $stmt->store_result();
     
-  }
-}
+      if ($stmt->num_rows > 0) {
+        $waiter_password = "";
+        $waiter_id = "";
+        $stmt->bind_result($waiter_email, $waiter_password, $waiter_id);
+        $stmt->fetch();
+    
+        if ($password == $waiter_password) {
+          $_SESSION['waiter_id'] = $waiter_id;
+          $_SESSION['user_type'] = 'waiter';
+          header("Location: waiter/dashboard.php");
+          exit();
+        } else {
+          $err = "Incorrect Password";
+        }
+      } else {
+        $err = "Incorrect Email";
+      }
+    }
+
+  } 
+
+
+
 
 require_once('partials/_head.php');
 
@@ -145,6 +171,20 @@ require_once('partials/_head.php');
     </div>
   </div>
   <!-- Footer -->
+  <style>
+        html,
+        body {
+            background: url('https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2022/06/07/1756/KATHM-P0428-Entrance-Porch.jpg/KATHM-P0428-Entrance-Porch.16x9.jpg');
+            background-size: cover;
+            background-color: #fff;
+            font-weight: bold;
+            color: white;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+            height: 100vh;
+            margin: 0;
+        }
+        </style>
   <?php
   require_once('partials/_footer.php');
   ?>

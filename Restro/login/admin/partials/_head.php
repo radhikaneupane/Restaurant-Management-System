@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-    <meta name="author" content="MartDevelopers Inc">
-    <title>Restaurant Management System </title>
+    <title>Restaurant Managaement System </title>
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/icons/site.webmanifest">
-    <link rel="mask-icon" href="assets/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="../admin/assets/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../admin/assets/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../admin/assets/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="../admin/assets/img/icons/site.webmanifest">
+    <link rel="mask-icon" href="../admin/assets/img/icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!-- Fonts -->
@@ -25,7 +24,7 @@
     <script src="assets/js/swal.js"></script>
     <!--Load Swal-->
     <?php if (isset($success)) { ?>
-        <!--This code for injecting success alert-->
+      
         <script>
             setTimeout(function() {
                     swal("Success", "<?php echo $success; ?>", "success");
@@ -35,7 +34,7 @@
 
     <?php } ?>
     <?php if (isset($err)) { ?>
-        <!--This code for injecting error alert-->
+        
         <script>
             setTimeout(function() {
                     swal("Failed", "<?php echo $err; ?>", "error");
@@ -45,7 +44,7 @@
 
     <?php } ?>
     <?php if (isset($info)) { ?>
-        <!--This code for injecting info alert-->
+       
         <script>
             setTimeout(function() {
                     swal("Success", "<?php echo $info; ?>", "info");

@@ -1,10 +1,9 @@
 <?php
 session_start();
 include('config/config.php');
-include('config/checklogin.php');
 include('config/code-generator.php');
 
-check_login();
+
 if (isset($_POST['addProduct'])) {
   //Prevent Posting Blank Values
   if (empty($_POST["prod_code"]) || empty($_POST["prod_name"]) || empty($_POST['prod_desc']) || empty($_POST['prod_price'])) {
@@ -46,14 +45,14 @@ require_once('partials/_head.php');
     <?php
     require_once('partials/_topnav.php');
     ?>
-    <!-- Header --> 
+   
     <div style="background-image: url(assets/img/theme/restro00.jpg); background-size: cover;" class="header  pb-8 pt-5 pt-md-8">
     <span class="mask bg-gradient-dark opacity-8"></span>
       <div class="container-fluid">
         <div class="header-body">
         </div>
       </div>
-    </div> 
+    </div>
     <!-- Page content -->
     <div class="container-fluid mt--8">
       <!-- Table -->
@@ -62,7 +61,7 @@ require_once('partials/_head.php');
           <div class="card shadow">
             <div class="card-header border-0">
               <h3>Please Fill All Fields</h3>
-            </div> 
+            </div>
             <div class="card-body">
               <form method="POST" enctype="multipart/form-data">
                 <div class="form-row">
@@ -76,7 +75,7 @@ require_once('partials/_head.php');
                     <input type="text" name="prod_code" value="<?php echo $alpha; ?>-<?php echo $beta; ?>" class="form-control" value="">
                   </div>
                 </div>
-                <hr> 
+                <hr>
                 <div class="form-row">
                   <div class="col-md-6">
                     <label>Product Image</label>
@@ -87,7 +86,7 @@ require_once('partials/_head.php');
                     <input type="text" name="prod_price" class="form-control" value="">
                   </div>
                 </div>
-                <hr> 
+                <hr>
                 <div class="form-row">
                   <div class="col-md-12">
                     <label>Product Description</label>
@@ -104,7 +103,7 @@ require_once('partials/_head.php');
             </div>
           </div>
         </div>
-      </div> 
+      </div>
       <!-- Footer -->
       <?php
       require_once('partials/_footer.php');
@@ -116,5 +115,5 @@ require_once('partials/_head.php');
   require_once('partials/_scripts.php');
   ?>
 </body>
- 
+
 </html>

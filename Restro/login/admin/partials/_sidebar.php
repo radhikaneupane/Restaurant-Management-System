@@ -1,10 +1,11 @@
 <?php
 $admin_id = $_SESSION['admin_id'];
+//$login_id = $_SESSION['login_id'];
 $ret = "SELECT * FROM  rpos_admin  WHERE admin_id = '$admin_id'";
 $stmt = $mysqli->prepare($ret);
 $stmt->execute();
 $res = $stmt->get_result();
-while ($admin = $res->fetch_object()) {
+while ($admin_id = $res->fetch_object()) {
 
 ?>
   <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
@@ -15,7 +16,7 @@ while ($admin = $res->fetch_object()) {
       </button>
       <!-- Brand -->
       <a class="navbar-brand pt-0" href="dashboard.php">
-        <img src="assets/img/brand/rms.png" class="navbar-brand-img" alt="...">
+        <img src="../admin/assets/img/brand/repos.png" class="navbar-brand-img" alt="...">
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
@@ -30,7 +31,7 @@ while ($admin = $res->fetch_object()) {
           <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="media align-items-center">
               <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="assets/img/theme/team-1-800x800.jpg">
+                <img alt="Image placeholder" src="../assets/img/">
               </span>
             </div>
           </a>
@@ -57,7 +58,7 @@ while ($admin = $res->fetch_object()) {
           <div class="row">
             <div class="col-6 collapse-brand">
               <a href="dashboard.php">
-                <img src="assets/img/brand/repos.png">
+                <img src="../admin/assets/img/brand/repos.png">
               </a>
             </div>
             <div class="col-6 collapse-close">
@@ -85,51 +86,34 @@ while ($admin = $res->fetch_object()) {
             <a class="nav-link" href="dashboard.php">
               <i class="ni ni-tv-2 text-primary"></i> Dashboard
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-user-tie text-primary"></i> HRM
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-users text-primary"></i> Customers
-            </a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="products.php">
               <i class="ni ni-bullet-list-67 text-primary"></i>Products
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="ni ni-cart text-primary"></i> Orders
+
+            <li class="nav-item">
+            <a class="nav-link" href="tablebooking.php">
+              <i class="ni ni-credit-card text-primary"></i> Table Booking
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="ni ni-credit-card text-primary"></i> Payments
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-file-invoice-dollar text-primary"></i> Receipts
-            </a>
-          </li>
-        </ul>
-        <!-- Divider -->
+       
         <hr class="my-3">
-        <!-- Heading -->
-        <h6 class="navbar-heading text-muted">Reporting</h6>
-        <!-- Navigation -->
+        <h6 class="navbar-heading text-muted" >Reporting</h6>
         <ul class="navbar-nav mb-md-3">
           <li class="nav-item">
-            <a class="nav-link" href="#">
+          <style>
+            .navbar-nav {
+              padding-left: 20px;
+            }
+               </style>
+
+            <a class="nav-link" href="orders_reports.php">
               <i class="fas fa-shopping-basket"></i> Orders
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#S">
+            <a class="nav-link" href="payments_reports.php">
               <i class="fas fa-funnel-dollar"></i> Payments
             </a>
           </li>
@@ -146,4 +130,6 @@ while ($admin = $res->fetch_object()) {
     </div>
   </nav>
 
-<?php } ?>
+<?php
+ } 
+ ?>
